@@ -1,7 +1,17 @@
-Set<String> bogieIds = new HashSet<>();
+import java.util.LinkedHashSet;
+import java.util.Set;
 
-bogieIds.add("B1");
-bogieIds.add("B2");
-bogieIds.add("B1"); // duplicate
+public class UC5 {
+    public static void main(String[] args) {
 
-System.out.println("Unique Bogie IDs: " + bogieIds);
+        Set<String> formation = new LinkedHashSet<>();
+
+        formation.add("Engine");
+        formation.add("Sleeper");
+        formation.add("Cargo");
+        formation.add("Guard");
+        formation.add("Sleeper"); // duplicate
+
+        System.out.println("Final Formation: " + formation);
+    }
+}
